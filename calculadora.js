@@ -3,54 +3,54 @@ var yValor = document.getElementById('y')
 var igual = document.getElementById('igual')
 const result = document.getElementById('resultado')
 
-function adicao(x,y) {
-    result.innerHTML = (x+y)
+export function adicao(x,y) {
+    return x+y
 }
-function subtracao(x,y) {
-    result.innerHTML = (x-y)
+export function subtracao(x,y) {
+    return x-y
 }
-function multiplicacao(x,y){
-    result.innerHTML = (x*y)
+export function multiplicacao(x,y){
+    return x*y
 }
-function divisao(x,y){
-    result.innerHTML = (x/y)
+export function divisao(x,y){
+    return x/y
 }
-function fatorial(x){
+export function fatorial(x){
     if (x < 0){
-        result.innerHTML = ('Não é possível calcular o fatorial de um número negativo')
+        return 'Não é possível calcular o fatorial de um número negativo'
     } else if (x > 0){
         var fat = 1
         for (var i = 1; i <= x; i++){
             fat *= i
         }
         if (fat) {
-            result.innerHTML = (fat)
+            return fat
         }
     } else {
-        result.innerHTML = (1)
+        return 1
     }
 }
-function potencia(x,y){
-    result.innerHTML = (x**y)
+export function potencia(x,y){
+    return x**y
 }
-function raiz(x,y){
-    result.innerHTML = (Math.sqrt(x,y))
+export function raiz(x){
+    return Math.sqrt(x)
 }
-function par(x){
+export function par(x){
     if ((x) % 2 === 0) {
-        result.innerHTML = (`${x} é par`)
+        return `${x} é par`
     } else {
-        result.innerHTML = (`${x} não é par`)
+        return `${x} não é par`
     }
 }
-function impar(x){
+export function impar(x){
     if ((x) % 2!== 0) {
-        result.innerHTML = (`${x} é impar`)
+        return `${x} é impar`
     } else {
-        result.innerHTML = (`${x} não é impar`)
+        return `${x} não é impar`
     }
 }
-function primo(x){
+export function primo(x){
     let pri = true;
   for(let i = 2; i < x; i++) {
     if(x % i === 0) {
@@ -60,16 +60,16 @@ function primo(x){
   }
   
   if(pri) {
-    result.innerHTML = (`${x} é primo`)
+    return `${x} é primo`
   } else {
-    result.innerHTML = (`${x} não é primo`)
+    return `${x} não é primo`
   }
 }
 
 
 function resultado() {
     switch(document.getElementById('operacoes').value) {
-        case 'adicao': adicao(Number(xValor.value), Number(yValor.value));
+        case 'adicao': result.innerHTML = adicao(Number(xValor.value), Number(yValor.value));
         break;
 
         case'subtracao': subtracao(Number(xValor.value), Number(yValor.value));
@@ -102,5 +102,3 @@ function resultado() {
 }
 
 igual.addEventListener('click', resultado)
-
-
