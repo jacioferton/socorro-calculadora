@@ -1,4 +1,5 @@
-import { adicao, subtracao, multiplicacao, divisao, fatorial, potencia, raiz, par, impar, primo } from './funcoes.js'
+//import pkg from './funcoes.js'
+//const { adicao, subtracao, multiplicacao, divisao, fatorial, potencia, raiz, par, impar, primo } = pkg
 
 var xValor = document.getElementById('x')
 var yValor = document.getElementById('y')

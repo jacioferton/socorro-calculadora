@@ -1,5 +1,6 @@
-import { adicao, subtracao, multiplicacao, divisao, fatorial, potencia, raiz, par, impar, primo } from '../funcoes.js'
-var assert = require('assert')
+//let assert = require("assert")
+import pkg from '../funcoes.js'
+const { adicao, subtracao, multiplicacao, divisao, fatorial, potencia, raiz, par, impar, primo } = pkg
 
 console.assert(adicao(6,7) == 13, "6 + 7 é 13")
 console.assert(adicao(4,0) == 4, "4 + 0 é 4")
