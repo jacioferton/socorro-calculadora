@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <input type="number" id="x">
+        <select name="operacoes" id="operacoes">
+            <option value="adicao" id="adicao">+</option>
+            <option value="subtracao" id="subtracao">-</option>
+            <option value="multiplicacao" id="multiplicacao">x</option>
+            <option value="divisao" id="divisao">/</option>
+            <option value="fatorial" id="fatorial">!n</option>
+            <option value="potencia" id="potencia">^</option>
+            <option value="raiz" id="raiz">√</option>
+            <option value="par" id="par">par?</option>
+            <option value="impar" id="impar">impar?</option>
+            <option value="primo" id="primo">primo?</option>
+        </select>
+        <input type="number" id="y">
+        <input type="button" value="calcular" id="igual">
+    </p>
+    <p>Resultado: <span id="resultado"></span></p>
+    <script type="module" src="./main.js"></script>
+    <script src="./funcoes.js"></script>
+</body>
+</html>
