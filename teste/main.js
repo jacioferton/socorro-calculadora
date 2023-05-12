@@ -12,6 +12,7 @@ var parN = document.getElementById('parN')
 var imparN = document.getElementById('imparN')
 var primoN = document.getElementById('primoN')
 var result = document.getElementById('resultado')
+var limparN = document.getElementById('limparN')
 
 function alertaDoisValores() {
     if (xValor.value === '' || yValor.value === '') {
@@ -24,6 +25,11 @@ function alertaUmValor() {
         alert('Por favor insira um valor para ser calculado')
         return true
     }
+}
+function limparBtn() {
+    xValor.value = ''
+    yValor.value = ''
+    result.innerHTML = ''
 }
 function adicaoBtn() {
     if (alertaDoisValores()) {} else {
@@ -153,3 +159,4 @@ raizN.addEventListener('click', raizBtn);
 parN.addEventListener('click', parBtn);
 imparN.addEventListener('click',imparBtn);
 primoN.addEventListener('click',primoBtn);
+limparN.addEventListener('click',limparBtn);
