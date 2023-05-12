@@ -21,7 +21,7 @@ function alertaDoisValores() {
     }
 }
 function alertaUmValor() {
-    if (xValor.value == 0) {
+    if (xValor.value == '') {
         result.innerHTML = 'Por favor insira um valor para ser calculado'
         return true
     }
