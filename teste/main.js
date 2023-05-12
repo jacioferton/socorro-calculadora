@@ -1,50 +1,80 @@
-//import pkg from './funcoes.js'
-//const { adicao, subtracao, multiplicacao, divisao, fatorial, potencia, raiz, par, impar, primo } = pkg
-
 var xValor = document.getElementById('x')
 var yValor = document.getElementById('y')
 var igual = document.getElementById('igual')
-const result = document.getElementById('resultado')
+var adicaoN = document.getElementById('adicaoN')
+var subtracaoN = document.getElementById('subtracaoN')
+var multiplicacaoN = document.getElementById('multiplicacaoN')
+var divisaoN = document.getElementById('divisaoN')
+var fatorialN = document.getElementById('fatorialN')
+var potenciaN = document.getElementById('potenciaN')
+var raizN = document.getElementById('raizN')
+var parN = document.getElementById('parN')
+var imparN = document.getElementById('imparN')
+var primoN = document.getElementById('primoN')
+var result = document.getElementById('resultado')
 
-function resultado() {
-    if (xValor.value !== '' && yValor.value !== '') {
-        switch(document.getElementById('operacoes').value) {
-            case 'adicao': result.innerHTML = adicao(Number(xValor.value), Number(yValor.value));
-            break;
-            
-            case'subtracao': result.innerHTML = subtracao(Number(xValor.value), Number(yValor.value));
-            break;
-        
-            case'multiplicacao': result.innerHTML = multiplicacao(Number(xValor.value), Number(yValor.value));
-            break;
-        
-            case 'divisao': result.innerHTML = divisao(Number(xValor.value), Number(yValor.value));
-            break;
-        
-            case 'fatorial': result.innerHTML = fatorial(Number(xValor.value));
-            break;
-
-            case 'potencia': result.innerHTML = potencia(Number(xValor.value), Number(yValor.value));
-            break;
-        
-            case 'raiz': result.innerHTML = raiz(Number(xValor.value), Number(yValor.value));
-            break;
-
-            case 'par': result.innerHTML = par(Number(xValor.value));
-            break;
-
-            case 'impar': result.innerHTML = impar(Number(xValor.value));
-            break;
-        
-            case 'primo': result.innerHTML = primo(Number(xValor.value));
-            break;
-        }
-    } else {
+function alertaDoisValores() {
+    if (xValor.value === '' || yValor.value === '') {
         alert('Por favor insira um valor para ser calculado')
+        return true
     }
 }
-
-igual.addEventListener('click', resultado)
+function alertaUmValor() {
+    if (xValor.value == 0) {
+        alert('Por favor insira um valor para ser calculado')
+        return true
+    }
+}
+function adicaoBtn() {
+    if (alertaDoisValores()) {} else {
+        result.innerHTML = adicao(Number(xValor.value), Number(yValor.value));
+    }
+}
+function subtracaoBtn() {
+    if (alertaDoisValores()) {} else {
+        result.innerHTML = subtracao(Number(xValor.value), Number(yValor.value));
+    }
+}
+function multiplicacaoBtn() {
+    if (alertaDoisValores()) {} else {
+        result.innerHTML = multiplicacao(Number(xValor.value), Number(yValor.value));
+    }
+}
+function divisaoBtn() {
+    if (alertaDoisValores()) {} else {
+        result.innerHTML = divisao(Number(xValor.value), Number(yValor.value));
+    }
+}
+function fatorialBtn() {
+    if (alertaUmValor()) {} else {
+        result.innerHTML = fatorial(Number(xValor.value));
+    }
+}
+function potenciaBtn() {
+    if (alertaDoisValores()) {} else {
+        result.innerHTML = potencia(Number(xValor.value), Number(yValor.value));
+    }
+}
+function raizBtn() {
+    if (alertaUmValor()) {} else {
+        result.innerHTML = raiz(Number(xValor.value));
+    }
+}
+function parBtn() {
+    if (alertaUmValor()) {} else {
+        result.innerHTML = par(Number(xValor.value));
+    }
+}
+function imparBtn() {
+    if (alertaUmValor()) {} else {
+        result.innerHTML = impar(Number(xValor.value));
+    }
+}
+function primoBtn() {
+    if (alertaUmValor()) {} else {
+        result.innerHTML = primo(Number(xValor.value));
+    }
+}
 
 function adicao(x,y) {
     return x+y
@@ -112,3 +142,14 @@ function primo(x){
     return `${x} não é primo`
   }
 }
+
+adicaoN.addEventListener('click', adicaoBtn);
+subtracaoN.addEventListener('click', subtracaoBtn);
+multiplicacaoN.addEventListener('click',multiplicacaoBtn);
+divisaoN.addEventListener('click', divisaoBtn);
+fatorialN.addEventListener('click', fatorialBtn);
+potenciaN.addEventListener('click',potenciaBtn);
+raizN.addEventListener('click', raizBtn);
+parN.addEventListener('click', parBtn);
+imparN.addEventListener('click',imparBtn);
+primoN.addEventListener('click',primoBtn);

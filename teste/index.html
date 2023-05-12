@@ -9,23 +9,21 @@
 <body>
     <p>
         <input type="number" id="x">
-        <select name="operacoes" id="operacoes">
-            <option value="adicao">+</option>
-            <option value="subtracao">-</option>
-            <option value="multiplicacao">x</option>
-            <option value="divisao">/</option>
-            <option value="fatorial">!n</option>
-            <option value="potencia">^</option>
-            <option value="raiz">√</option>
-            <option value="par">par?</option>
-            <option value="impar">impar?</option>
-            <option value="primo">primo?</option>
-        </select>
         <input type="number" id="y">
-        <input type="button" value="calcular" id="igual">
+        <br>
+        <input type="button" value="adicao" id="adicaoN">
+        <input type="button" value="subtracao" id="subtracaoN">
+        <input type="button" value="multiplicacao" id="multiplicacaoN">
+        <input type="button" value="divisao" id="divisaoN">
+        <input type="button" value="fatorial" id="fatorialN">
+        <input type="button" value="potencia" id="potenciaN">
+        <input type="button" value="raiz" id="raizN">
+        <input type="button" value="par" id="parN">
+        <input type="button" value="impar" id="imparN">
+        <input type="button" value="primo" id="primoN">
     </p>
     <p>Resultado: <span id="resultado"></span></p>
-    <script src="./cypress.config.js"></script>
+    <script type="module" src="./cypress.config.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>
