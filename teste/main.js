@@ -16,13 +16,13 @@ var limparN = document.getElementById('limparN')
 
 function alertaDoisValores() {
     if (xValor.value === '' || yValor.value === '') {
-        alert('Por favor insira um valor para ser calculado')
+        result.innerHTML ='Por favor insira um valor para ser calculado'
         return true
     }
 }
 function alertaUmValor() {
     if (xValor.value == 0) {
-        alert('Por favor insira um valor para ser calculado')
+        result.innerHTML = 'Por favor insira um valor para ser calculado'
         return true
     }
 }
